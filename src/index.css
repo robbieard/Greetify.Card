@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/20 backdrop-blur-md border border-white/30;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
+  }
+
+  .font-handwriting {
+    font-family: 'Caveat', cursive;
+  }
+
+  /* Responsive utilities */
+  .container-responsive {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-responsive-xl {
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl;
+  }
+
+  .text-responsive-lg {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+
+  .text-responsive-md {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+
+  .grid-responsive {
+    @apply grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-12;
+  }
+
+  .form-responsive {
+    @apply lg:col-span-2 space-y-6 lg:space-y-8;
+  }
+
+  .preview-responsive {
+    @apply lg:col-span-3 flex items-center justify-center relative order-first lg:order-last;
+  }
+
+  .button-responsive {
+    @apply w-full py-4 sm:py-5 lg:py-6 text-base sm:text-lg rounded-xl sm:rounded-2xl;
+  }
+
+  .input-responsive {
+    @apply w-full p-3 sm:p-4 rounded-xl sm:rounded-2xl text-sm sm:text-base;
+  }
+
+  .card-responsive {
+    @apply w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto;
+  }
+
+  /* Line clamp utilities */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
+  .border-3 {
+    border-width: 3px;
+  }
+}
